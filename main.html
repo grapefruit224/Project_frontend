@@ -241,28 +241,151 @@
 
       }
       #support div{
-          margin: 0px 200px;
-          height: 200px;
-          padding: 51px 58px;
-          border-radius: 40px;
-          background-color: #263140;
+          /*margin: 0px 200px;*/
+          /*height: 200px;*/
+          /*padding: 51px 58px;*/
+          /*border-radius: 40px;*/
+          /*background-color: #263140;*/
       }
 
       .support_subscribe{
           display:flex;
-          align-items: center;
-          justify-content: space-evenly;
+          /*align-items: center;*/
+          /*justify-content: space-evenly;*/
+          position: absolute;
+          width: 1280px;
+          height: 200px;
+          /*top: 3500px;*/
+          margin:0px 200px;
+          background-color: #263140;
+          border-radius: 30px;
           color: white;
       }
       .support_subscribe h1{
-          margin-bottom: 20px;
+          /*margin-bottom: 20px;*/
           font-size: 36px;
       }
 
-      .support_subscribe input{
-          height: 60px;
+      /*.support_subscribe input{*/
+      /*    height: 60px;*/
+      /*    width: 530px;*/
+      /*    border-radius: 60px;*/
+      /*}*/
+
+      .last_cat{
+          display:flex;
+          margin: 100px 0px;
+          position:absolute;
+          /*top:3819px;*/
+          width:100%;
+
+      }
+
+      .list-pic {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;  /* 구분점 제거 */
+          padding: 0;             /* 기본 패딩 제거 */
+          margin: 0;
+      }
+      .list-pic li {
+          flex: 1 1 calc(33.333% - 10px);
+          padding: 10px;          /* 각 항목에 패딩 추가 */
+          text-align: center;
+          box-sizing: border-box;
+      }
+      .list-pic li:nth-child(3n+1) {
+           clear: left; /* 각 행의 첫 번째 항목을 왼쪽 정렬 */
+       }
+
+      .list-pic li img{
+          width:300px;
+          height:300px;
+          border-radius: 30px;
+      }
+      .showmore_button{
+          background-color: #D97652;
+          color: white;
+          border: None;
+          width: 140px;
+          height: 50px;
+          border-radius: 40px;
+          font-family: Pretendard;
+          font-size: 16px;
+      }
+      .showmore_button:active {
+          background-color: #F29D52;
+
+      }
+
+      .email_box{
+          position: absolute;
           width: 530px;
+          height: 60px;
+          top: 70px;
+          left: 692px;
           border-radius: 60px;
+          background-color: white;
+      }
+      .email{
+          position: absolute;
+          top: 90px;
+          left: 760px;
+
+          width: 184px;
+          height: 20px;
+          font-size: 16px;
+          color: #767676;
+          font-weight: 400;
+          line-height: 20px;
+          border:none;
+          outline: none;
+      }
+      .email_icon{
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 88px;
+          left: 720px;
+      }
+      .subs_btn{
+          position: absolute;
+          width: 135px;
+          height: 50px;
+          top: 75px;
+          left: 1081px;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20px;
+          text-align: center;
+          color: white;
+          border: none;
+          border-radius: 40px;
+          background-color: #D97652;
+          padding: 15px 29px 15px 29px;
+      }
+      .word9{
+          position: absolute;
+          width: 448px;
+          height: 45px;
+          top: 65px;
+          left: 58px;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 10px;
+          /*white-space: nowrap;*/
+          color: white;
+      }
+      .word10{
+          position: absolute;
+          width: 471px;
+          height: 36px;
+          top: 114px;
+          left: 58px;
+          color: white;
+          font-size: 14px;
+          font-weight: 400px;
+          line-height: 20px;
       }
 
 
@@ -320,13 +443,22 @@
             </span>
 
           </div>
-          <div class="about3-grid"></div>
-          <script src="./js/jquery-3.7.1.js"></script>
-          <script src="script.js"></script>
+<!--          <div class="about3-grid"></div>-->
+<!--          <script src="./js/jquery-3.7.1.js"></script>-->
+<!--          <script src="script.js"></script>-->
 
           <div class="about3-showmore">
               <h3>Continue exploring HODU</h3>
-              <button class="download_button">Show more</button>
+              <ul class="list-pic">
+                  <li><img src="img/about/about3/img_1.png"></li>
+                  <li><img src="img/about/about3/img_1-1.png"></li>
+                  <li><img src="img/about/about3/img_2.png"></li>
+                  <li><img src="img/about/about3/img_2-1.png"></li>
+                  <li><img src="img/about/about3/img_3.png"></li>
+                  <li><img src="img/about/about3/img_3-1.png"></li>
+              </ul>
+              <button class="showmore_button">Show more</button>
+              <script src="showmore.js" defer></script>
           </div>
 
           <hr>
@@ -337,28 +469,45 @@
               <p>
                   330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
               </p>
-              #지도
+
+              <div id="map" style="width:100%;height:400px; text-align: center;"></div>
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=-"></script>
+              <script>
+                  var container = document.getElementById('map');
+                  var options = {
+                      center: new kakao.maps.LatLng(33.450701, 126.570667),
+                      level: 3
+                  };
+
+                  var map = new kakao.maps.Map(container, options);
+              </script>
+
           </div>
+
+
+
 
 
       </section>
 
-      <section id="support">
+<!--      <img class='last_cat' src="img/img_5.png">-->
+      <section id="support">=
+          <img class='last_cat' src="img/img_5.png">
           <div class="support_subscribe">
-              <span>
-                  <h1>Subscribe to our Blog post</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-Lorem Ipsum has been the industry's standard dummy text </p>
-              </span>
+              <h2 class="word9">Subscribe to our Blog post</h2>
+              <p class="word10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+              <div class="email_box"></div>
 
-              <span>
-                  <input >
-              </span>
+                  <input type="text" placeholder="Enter your e-mail address" class="email">
+                    <div><button class="subs_btn">Subscribe</button></div>
+                    <img src="img/icon_email.png" class="email_icon">
 
           </div>
-          <img src="img/img_5.png" style="width:100%">
+<!--          <img class='last_cat' src="img/img_5.png">-->
       </section>
+
   </main>
+
 
   <footer>
       <img src="img/header_logo.svg" class="footer_logo">
