@@ -65,7 +65,7 @@ main{
     align-items: center;
     justify-content: space-between;
     padding: 100px 200px 0px;
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
     height: 90vh;
 
     background-color: #F2E9D8;
@@ -233,15 +233,19 @@ footer{
     margin: 0;
     padding: 0;
 
+
     /*position: absolute;*/
     /*left: 860px;*/
     /*bottom: 0;*/
 }
 .home-image img {
+
     width: 415px;
     height: 766px;
     margin: 0;
     padding: 0;
+    /*position: absolute;*/
+    /*bottom:0;*/
 
 }
 
@@ -274,6 +278,8 @@ footer{
 #support{
     flex-grow: 1;
     margin-bottom:105px;
+    margin-top: 100px;
+
 
 }
 #support div{
@@ -285,17 +291,18 @@ footer{
 }
 
 .support_subscribe{
-    display:flex;
-    /*align-items: center;*/
-    /*justify-content: space-evenly;*/
+
     position: absolute;
-    width: 1280px;
+    width: 75%;
     height: 200px;
     /*top: 3500px;*/
-    margin:0px 200px;
+    margin-left: 200px;
+    /*padding:0px 200px;*/
     background-color: #263140;
     border-radius: 30px;
     color: white;
+
+
 }
 .support_subscribe h1{
     /*margin-bottom: 20px;*/
@@ -356,17 +363,17 @@ footer{
 
 .email_box{
     position: absolute;
-    width: 530px;
+    width: 40%;
     height: 60px;
     top: 70px;
-    left: 692px;
+    right: 58px;
     border-radius: 60px;
     background-color: white;
 }
 .email{
     position: absolute;
-    top: 90px;
-    left: 760px;
+    top: 23px;
+    left: 57px;
 
     width: 184px;
     height: 20px;
@@ -381,15 +388,15 @@ footer{
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 88px;
-    left: 720px;
+    top: 20px;
+    left: 20px;
 }
 .subs_btn{
     position: absolute;
     width: 135px;
     height: 50px;
-    top: 75px;
-    left: 1081px;
+    top: 5px;
+    right: 5px;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
