@@ -6,3 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+../js/config.js
+../js/kakao_api.js
+../.idea
