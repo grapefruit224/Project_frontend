@@ -1,9 +1,20 @@
 const listPic = document.querySelector('.list-pic');
 const btn  = document.querySelector('.showmore_button');
+const loading = document.getElementById('loading');
 let pageToPatch = 1;
 
-btn.addEventListener('click', ()=>{fetchImage(pageToPatch += 1)});
+// btn.addEventListener('click', ()=>{fetchImage(pageToPatch += 1)});
 
+btn.addEventListener('click', async () => {
+    loading.style.display = 'block';
+    // btn.innerHTML = ''; // 기존 이미지를 제거
+
+    try {
+        await fetchImage(pageToPatch += 1);
+    } finally {
+        loading.style.display = 'none';
+    }
+});
 
 async function fetchImage(pageNum){
     try {

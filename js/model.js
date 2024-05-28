@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('wow!')
     });
 
+    span.addEventListener('click', () => {
+        modal.style.display = 'none';
+        console.log('wow!')
+    });
+
     // 모달 외부 클릭 시 닫기
     window.addEventListener('click', (event) => {
         if (event.target === modal) {

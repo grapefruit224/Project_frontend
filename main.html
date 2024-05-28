@@ -42,15 +42,15 @@
                   <img src="img/about/img_4.png" alt="Cat with box on head">
               </span>
               <span class="about_text">
-                  <h1>Lorem Ipsum is simply<br>dummy text of the printing and</h1>
+                  <strong style="font-size: 32px">Lorem Ipsum is simply<br>dummy text of the printing and</strong>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting<br>industry. </p>
               </span>
           </div>
 
           <div class="about2">
-              <h1>
+              <strong class="about2-1">
                   dummy text of the printing and dummy
-              </h1>
+              </strong>
               <span>
                   Lorem Ipsum is simply <strong style="color:#D97652;">dummy text</strong> of the printing and typesetting industry.<br>
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -67,6 +67,10 @@
                   <li><img src="img/about/about3/img_3.png"></li>
                   <li><img src="img/about/about3/img_3-1.png"></li>
               </ul>
+
+              <div id="loading" style="display: none;">
+                  <img src="img/loading.gif" class="loading_img" alt="Loading...">
+              </div>
               <button class="showmore_button">Show more</button>
               <script src="js/script.js" defer></script>
           </div>
@@ -74,7 +78,7 @@
           <hr>
 
           <div class="about4">
-              <h1>Where you'll be</h1>
+              <strong style="font-size: 20px;">Where you'll be</strong>
               <p>
                   330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
               </p>
@@ -84,11 +88,21 @@
               <script>
                   var container = document.getElementById('map');
                   var options = {
-                      center: new kakao.maps.LatLng(33.450701, 126.570667),
+                      center: new kakao.maps.LatLng(33.4423464, 126.5714548),
                       level: 3
                   };
 
                   var map = new kakao.maps.Map(container, options);
+
+                  var markerPosition  = new kakao.maps.LatLng(33.4423464, 126.5714548);
+
+                  // 마커를 생성합니다
+                  var marker = new kakao.maps.Marker({
+                      position: markerPosition
+                  });
+
+                  // 마커가 지도 위에 표시되도록 설정합니다
+                  marker.setMap(map);
               </script>
           </div>
       </section>
@@ -113,6 +127,7 @@
 
       <div id="myModal" class="modal">
           <div class="modal-content">
+              <span class="close">&times;</span>
               <img src="img/modal/modal.png" class="modal-img">
               <div class="modal-text">
                   <img src="img/modal/inside_cat.png">
