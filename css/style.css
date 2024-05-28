@@ -28,10 +28,6 @@ header{
 }
 
 
-/*nav {*/
-/*    font-size: 16px;*/
-
-/*}*/
 nav ul {
     list-style: none;
     margin: 0 1em;
@@ -129,13 +125,10 @@ footer{
     width: 100%;
     z-index: 1000;
 
-    /*height: 20px;*/
     background-color: white;
-    /*color: white;*/
-    /*  bottom: 0;*/
+
     padding: 20px 0px;
 
-    /*position: fixed;*/
 
         display: flex;
         justify-content: space-between;
@@ -167,9 +160,7 @@ footer{
     height: 40px;
 }
 
-/*.fixed-btn:hover {*/
-/*    background-color: #0056b3;*/
-/*}*/
+
 .footer_logo{
     width: 226px;
     height: 70px;
@@ -233,19 +224,13 @@ footer{
     margin: 0;
     padding: 0;
 
-
-    /*position: absolute;*/
-    /*left: 860px;*/
-    /*bottom: 0;*/
 }
 .home-image img {
-
     width: 415px;
     height: 766px;
     margin: 0;
     padding: 0;
-    /*position: absolute;*/
-    /*bottom:0;*/
+
 
 }
 
@@ -282,13 +267,6 @@ footer{
 
 
 }
-#support div{
-    /*margin: 0px 200px;*/
-    /*height: 200px;*/
-    /*padding: 51px 58px;*/
-    /*border-radius: 40px;*/
-    /*background-color: #263140;*/
-}
 
 .support_subscribe{
 
@@ -308,12 +286,6 @@ footer{
     /*margin-bottom: 20px;*/
     font-size: 36px;
 }
-
-/*.support_subscribe input{*/
-/*    height: 60px;*/
-/*    width: 530px;*/
-/*    border-radius: 60px;*/
-/*}*/
 
 .last_cat{
     display:flex;
@@ -355,10 +327,10 @@ footer{
     border-radius: 40px;
     font-family: Pretendard;
     font-size: 16px;
+    margin-top:20px;
 }
 .showmore_button:active {
     background-color: #F29D52;
-
 }
 
 .email_box{
@@ -508,17 +480,3 @@ footer{
     text-decoration: none;
     cursor: pointer;
 }
-
-/*!* 구독 버튼 스타일 *!*/
-/*.subs_btn {*/
-/*    padding: 10px 20px;*/
-/*    background-color: #007BFF;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.subs_btn:hover {*/
-/*    background-color: #0056b3;*/
-/*}*/
