@@ -254,7 +254,7 @@ footer{
 }
 
 .about3-showmore h3{
-    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .about4{
@@ -331,7 +331,7 @@ footer{
     border-radius: 40px;
     font-family: Pretendard;
     font-size: 16px;
-    margin-top:20px;
+    margin-top:10px;
 }
 .showmore_button:active {
     background-color: #F29D52;
