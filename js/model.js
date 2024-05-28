@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 구독 버튼 클릭 이벤트 추가
     btn.addEventListener('click', (event) => {
         modal.style.display = 'block';
-        console.log(event);
     });
 
     // 모달 닫기 버튼 클릭 이벤트 추가
     close.addEventListener('click', () => {
         modal.style.display = 'none';
-        console.log('wow!')
     });
 
     span.addEventListener('click', () => {

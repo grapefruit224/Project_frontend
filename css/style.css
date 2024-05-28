@@ -81,6 +81,7 @@ main{
 }
 #about img{
     border-radius: 30px;
+    /*width:100%;*/
 }
 
 #about p{
@@ -342,12 +343,7 @@ footer{
     align-items: center;
     height: 150px;
     width: 150px;
-    margin: 20px auto;
-}
-
-.loading_img{
-    height: 150px;
-    width: 150px;
+    margin: 40px auto;
 }
 
 .email_box{
